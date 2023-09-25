@@ -1,62 +1,64 @@
 # Ethan's Personal Portfolio Website
 
-This project is the first of many projects i aim to display on my github (and later this website). The objective is to create a simple smooth and stylised website that will assist me in displaying how amazing i am (HA HA) and what io have acomplished with a bit about me.
+This project is the first of many projects I aim to display on my GitHub (and later this website). The objective is to create a simple, smooth, and stylized website that will assist me in showcasing how amazing I am (HA HA) and what I have accomplished, along with some personal details about me.
 
 ADD PICTURE OF WEBSTIE
 
 ## Table of Contents
 
-- [Personal Information](#personal-infromation)
-- [Instillation](#instillation)
+- [Personal Information](#personal-information)
+- [Installation](#installation)
 - [Features](#features)
-- [Contibuting](#contibuting)
+- [Contributing](#contributing)
 - [To-Do-List](#to-do-list)
 - [license](#license)
 
-# Personal Infromation
+## Personal Information
 
-## About me and this project
+### About me and this project
 
-Hello, this is my website as described above, im a graduate computer science student with the goal of making this github look better as i havent been able to move over my uni work since graduating and unfortunatley my gitlab thus has been wiped :( . Therefore i need to do some meaningfull projects to display my skill and worth and my ability to work on multiple projects using GIT !
+Hello! As described above, this is my website. I'm a graduate computer science student with the goal of enhancing this GitHub repository. Unfortunately, I haven't been able to transfer my university work since graduating, and my GitLab account has since been wiped. Therefore, I'm working on several meaningful projects to showcase my skills, worth, and my ability to work on multiple projects using GIT.
 
 INSERT PICTURE OF ME
 
-If you are an employer seeing this or a fellow colleague please feel free to browse, with my work i like to make my ReadMe's personal and somewhat well laid out but i do apoligise for any grammar or spelling mistakes! Enjoy and please feel free to contact me.
+If you're an employer or a fellow colleague viewing this, please feel free to explore. I aim to make my READMEs personal and well-organized. I apologize in advance for any grammar or spelling mistakes! Enjoy your visit, and please feel free to contact me.
 
 ethanventonsheridansmith@gmail.com
 
-There should be some attached design docks within this repository, however this may be added later on.
+Design docs will be attached to this repository, but they might be added at a later stage.
 
-# Instillation
+## Installation
 
-Instructions on the instillation of the project
+Follow these instructions to set up the project:
 
-1. Clone rep
+
+1. Clone the repo:
 
 ```bash 
 git clone https://github.com/ethansheridansmith/PersonalPortfolioWebsite
 cd PersonalPortfolioWebsite
 ```
 
-2. Install requirments
+2. Install requirments:
 
 ```bash
 pip install -r requirements.txt
 ``` 
 
-3. Navigation
+3. Navigate to the frontend directory:
 
 ```bash
 cd frontend
 ```
 
-4. Install front end dependencies
+4. Install frontend dependencies:
+
 
 ```bash
 npm install
 ```
 
-5. Run backend 
+5. Run the backend 
 
 ```bash
 python manage.py runserver
@@ -68,29 +70,28 @@ python manage.py runserver
 npm start
 ```
 
-# Features
+## Features
 
-- Personal information
-- Contact details and relevant links 
-- Sleek design 
-- Photos of yours truely
-- Previous projects and in the works projects
-- Education and Work expreiences information 
+- Personal details and background.
+- Contact information and relevant links.
+- Sleek and modern design.
+- Personal photographs.
+- Highlighted projects and ongoing works.
+- Information about my educational background and work experiences.
 
-# Contibuting
+# Contributing
 
-If you'd like to contribute or add to this design or use it as a base design for your own website please feel free to clone, pull request or open an issue within this project.
+If you'd like to contribute, modify this design, or use it as a foundation for your own website, please feel free to clone, submit a pull request, or open an issue within this project.
 
-# To-Do-List
+## To-Do-List
 
-- [x] Create this lovely ReadMe.MD 
-- [ ] Start on setup and back end
-- [ ] Create front end 
-- [ ] Polish with images and stylise
-- [ ] Finish project and display
-- [ ] Set up Liscence
+- [] Create this comprehensive README.md.
+- [] Kick-start the backend setup.
+- [] Develop the frontend.
+- [] Enhance with images and refine the design.
+- [] Complete the project and display it.
+- [] Configure the License.
 
-# license
+## License
 
-havent set this up yet :)
-
+Yet to be configured.
