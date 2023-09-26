@@ -1,41 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import '../styles//Home.css';
+import React from 'react';
+import Typed from 'react-typed';
+import '../styles/Home.css';
 
 function Home() {
-    const fullName = "Ethan Sheridan Smith";
-    const [text, setText] = useState('');
-    const [reverse, setReverse] = useState(false);
-    const [delay, setDelay] = useState(200); // Initial delay for typing
+  const name = "Ethan Sheridan-Smith";
+  const incorrectName = "Ethan Sheridn-Smith";
+  const whoops = ", Whoops!";
 
-    useEffect(() => {
-        const timer = setInterval(() => {
-            if (!reverse && text.length < fullName.length) {
-                setText(fullName.substring(0, text.length + 1));
-                if (text.length + 1 === fullName.length) {
-                    // Once typing is complete, we introduce a pause of 2 seconds
-                    clearInterval(timer);
-                    setTimeout(() => {
-                        setDelay(100); // Set deletion speed faster
-                        setReverse(true);
-                    }, 2000);
-                }
-            } else if (reverse && text.length > 0) {
-                setText(text.substring(0, text.length - 1));
-                if (text.length === 1) {
-                    setReverse(false);
-                    setDelay(200); // Reset to typing speed after deletion
-                }
-            }
-        }, delay);
-
-        return () => clearInterval(timer);
-    }, [text, reverse, delay]);
-
-    return (
-        <div className="home-container">
-            <h1 className="home-title">{text}<span className="cursor">|</span></h1>
+  return (
+      <div className="home-container">
+        <div className='title-container'>
+          <h1 className="home-title">
+              <Typed 
+                  strings={[
+                      incorrectName,
+                      incorrectName + whoops,
+                      "Ethan ",
+                      name,
+                      name,
+                      name,
+                  ]}
+                  typeSpeed={100}
+                  backSpeed={50}
+                  backDelay={1000}
+                  loop
+              />
+          </h1>
         </div>
-    );
+        <div className='body-container'>
+          <p className='home-text-about'>
+            Hello! Welcome to <span className="emphasis">my personal portfolio</span>. I crafted this space to showcase my <span className="emphasis">Projects</span>, <span className="emphasis">Education</span>, and <span className="emphasis">Experience</span>. Interested in getting in touch? Here's <span className="emphasis-link">how you can contact me</span>.
+            <br /><br />
+            Working on this portfolio sharpened my skills in <span className="emphasis">CSS</span>, <span className="emphasis">HTML</span>, and, most importantly, <span className="emphasis">JavaScript</span>. It's been a delightful and educational journey. Feel free to explore and enjoy!
+          </p>
+        </div>
+      </div>
+  );
 }
+
 
 export default Home;

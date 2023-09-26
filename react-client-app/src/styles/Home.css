@@ -1,26 +1,61 @@
 .home-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
+    padding-top: 60px; /* Adjust based on the height of the title so that body content starts below the fixed title */
 }
 
 .home-title {
-    color: white;
+    position: fixed; /* Make title fixed at the top */
+    top: 0; /* Position at the very top */
+    left: 0; 
+    width: 100%; /* Take full width */
+    text-align: center; /* Center the text */
+    color: #333;
     font-size: 2em;
     letter-spacing: 2px;
-    display: flex;       /* added for cursor positioning */
-    align-items: center; /* added for vertical centering of cursor */
 }
 
-.cursor {
-    display: inline-block;
-    width: 0.5em;      /* Width of the cursor, adjust as needed */
-    height: 1.5em;     /* Height of the cursor, adjust as needed */
-    background-color: white;
-    margin-left: 0.2em; /* Space between text and cursor */
-    animation: blink 1s infinite;
+.title-container,
+.body-container {
+    width: 100%;
+    box-sizing: border-box;
 }
+
+.home-description {
+    font-size: 16px;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto; /* Center the body content horizontally */
+    line-height: 1.5;
+}
+
+.emphasis {
+    font-weight: bold;
+    color: #444;
+}
+
+.emphasis-link {
+    font-weight: bold;
+    color: #0077cc; /* or any other color you like */
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s;
+
+    &:hover {
+        color: #0055a5; /* a slightly darker shade for hover */
+    }
+}
+
+.home-text-about {
+    font-size: 18px; /* Adjust as per your liking */
+    font-weight: 400;
+    color: #666; /* This will give a slight grayish tint to the text for a modern look */
+    line-height: 1.6; /* For better readability */
+    padding: 10px 20px; /* Add padding to give it room */
+}
+
 
 @keyframes blink {
     0%, 49% {
