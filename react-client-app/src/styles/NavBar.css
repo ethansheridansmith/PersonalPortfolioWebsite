@@ -1,20 +1,55 @@
-/* NavBar.css */
+body, html {
+    margin: 0;
+    padding: 0;
+}
 
 .navbar {
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; 
+    width: 60px; 
+    transition: width 0.3s ease;
+  }
+  
+  .navbar#open {
+    width: 260px; 
+  }
+  
+
+.icon-top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: slategray;
-    padding: 1rem 2rem;
+    height: 60px; 
 }
 
-.navbar a {
+
+.Links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+.Links a {
     color: white;
     text-decoration: none;
-    margin: 0 1rem;
-    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    transform: translateX(-20px);
 }
 
-.navbar a:hover {
-    color: #ddd;
+.navbar#open .Links a {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.Links a > svg {
+    margin-right: 10px;
 }

@@ -1,22 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/NavBar.css'; // Import the CSS
+import HomeIcon from '@mui/icons-material/Home';
+import WorkIcon from '@mui/icons-material/Work';
+import SchoolIcon from '@mui/icons-material/School';
+import ContactMailIcon from '@mui/icons-material/ContactMail';
+import FolderIcon from '@mui/icons-material/Folder';
+import ReorderIcon from '@mui/icons-material/Reorder';
+import { useContext } from 'react';
+import { AppContext } from '../AppContext';  
 
 function NavBar() {
+  const { isNavbarExpanded, toggleNavbar } = useContext(AppContext);
+
   return (
-    <div className='navbar'>
-        <div className='toggleButton'>
-            <button></button>
-        </div>
-        <div className='Links'>
-            <Link to="/">Home</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/education">Education</Link>
-            <Link to="/experience">Experience</Link>
-            <Link to="/contact_information">Contact Information</Link>
-        </div>
-    </div>
+        <div 
+            className='navbar' 
+            id={isNavbarExpanded ? "open" : "close"}
+            onMouseEnter={toggleNavbar}
+            onMouseLeave={toggleNavbar} 
+        >
+          <div className="icon-top">
+          <ReorderIcon style={{ color: '#ffffff' }} />
+          </div>
+          <div className='Links'>
+            <Link to="/"><HomeIcon />{isNavbarExpanded && ' Home'}</Link>
+            <Link to="/projects"><FolderIcon />{isNavbarExpanded && ' Projects'}</Link>
+            <Link to="/education"><SchoolIcon />{isNavbarExpanded && ' Education'}</Link>
+            <Link to="/experience"><WorkIcon />{isNavbarExpanded && ' Experience'}</Link>
+            <Link to="/contact_information"><ContactMailIcon />{isNavbarExpanded && ' Contact Information'}</Link>
+          </div>
+      </div>
   );
 }
 
-export default NavBar
+export default NavBar;
