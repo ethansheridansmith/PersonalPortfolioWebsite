@@ -21,7 +21,7 @@ function NavBar() {
             onMouseLeave={toggleNavbar} 
         >
           <div className="icon-top">
-          <ReorderIcon style={{ color: '#ffffff' }} />
+          <ReorderIcon style={{ color: '#c5beaa' }} />
           </div>
           <div className='Links'>
             <Link to="/"><HomeIcon />{isNavbarExpanded && ' Home'}</Link>

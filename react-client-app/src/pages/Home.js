@@ -3,40 +3,42 @@ import Typed from 'react-typed';
 import '../styles/Home.css';
 
 function Home() {
-  const name = "Ethan Sheridan-Smith";
-  const incorrectName = "Ethan Sheridn-Smith";
-  const whoops = ", Whoops!";
+    const name = "Ethan Sheridan-Smith";
+    const incorrectName = "Ethan Sheridn";
 
-  return (
-      <div className="home-container">
-        <div className='title-container'>
-          <h1 className="home-title">
-              <Typed 
-                  strings={[
-                      incorrectName,
-                      incorrectName + whoops,
-                      "Ethan ",
-                      name,
-                      name,
-                      name,
-                  ]}
-                  typeSpeed={100}
-                  backSpeed={50}
-                  backDelay={1000}
-                  loop
-              />
-          </h1>
+    return (
+        <div className="home-container">
+            <div className='title-container'>
+                <h1 className="home-title">
+                    <Typed 
+                        strings={[
+                            incorrectName,
+                            "Ethan ",
+                            name
+                        ]}
+                        typeSpeed={100}
+                        backSpeed={50}
+                        backDelay={1000}
+                        loop={false}  // stop the typing from looping
+                    />
+                </h1>
+            </div>
+            <div className='body-container'>
+                <p className='home-text-about'>
+                    Welcome to <span className="emphasis">my digital realm</span>. This portfolio unveils my journey in <span className="emphasis">Programming</span> and Design. Navigate to see my <span className="emphasis">Projects</span>, delve into my <span className="emphasis">Education</span>, or discover my professional <span className="emphasis">Experience</span>. If you wish to collaborate or chat, please <span className="emphasis-link">reach out</span>.
+                </p>
+            </div>
+            <div className="image-container">
+                <img src="..\image\IMG_2918 Copy.JPG" alt="Ethan Sheridan-Smith" className="profile-image" />
+                <div className="overlapping-text">Ethan Sheridan-Smith</div>
+            </div>
+            <div>
+              <p>
+                
+              </p>
+            </div>
         </div>
-        <div className='body-container'>
-          <p className='home-text-about'>
-            Hello! Welcome to <span className="emphasis">my personal portfolio</span>. I crafted this space to showcase my <span className="emphasis">Projects</span>, <span className="emphasis">Education</span>, and <span className="emphasis">Experience</span>. Interested in getting in touch? Here's <span className="emphasis-link">how you can contact me</span>.
-            <br /><br />
-            Working on this portfolio sharpened my skills in <span className="emphasis">CSS</span>, <span className="emphasis">HTML</span>, and, most importantly, <span className="emphasis">JavaScript</span>. It's been a delightful and educational journey. Feel free to explore and enjoy!
-          </p>
-        </div>
-      </div>
-  );
+    );
 }
-
 
 export default Home;

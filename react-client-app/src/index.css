@@ -5,8 +5,10 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: grey; /* This is a light gray color. */
+    background-color: #c5beaa; /* This is a light gray color. */
   }
   
   /* ... other global styles ... */
+
+  
   

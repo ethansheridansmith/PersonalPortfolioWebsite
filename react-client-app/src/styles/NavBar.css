@@ -4,7 +4,7 @@ body, html {
 }
 
 .navbar {
-    background-color: #333;
+    background-color: #333333;
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@ body, html {
 }
 
 .Links a {
-    color: white;
+    color: #c5beaa;
     text-decoration: none;
     display: flex;
     align-items: center;
